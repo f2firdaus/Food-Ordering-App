@@ -1,22 +1,55 @@
-import React from 'react'
+// import React from 'react'
+// import { useEffect, useState } from 'react'
+import { menuData } from '../menuData';
+// import Shimmer from './Shimmer';
+// import { foodData } from '../foodData'
+import { Link } from 'react-router-dom';
 
-const Cards = () => {
-  return (
+const Cards = ({ search }) => {
+
+    
+    
+   
+  return(
       <>
-          <div className="container">
-              <div className="img">
-                  <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/h0iuahkue4rxgwmqhxcz" width="300px" alt="" />
+          
+              <div className="cards">
+              
+                   {
+                      menuData.filter((item) => item.name.toLowerCase().includes(search))
+                          .map((restraunt) => {
+                              return (
+                                  <>
+                                      <div className="container">
+                                          <Link to={`/menu/${restraunt.id}`}>     <div className="img">
+                                              <img src={restraunt.cloudinaryImageId} alt="" />
+                                          </div>
+                                          <div className="name">
+                                                  <h4>{restraunt.name}</h4>
+                                                  <p>{ restraunt.areaName}</p>
+                                    
+                                
+                                          </div>
+                                          <div className="rating">
+                                              <div className='rating-1'>
+                                                  <span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Star_icon_stylized.svg/1200px-Star_icon_stylized.svg.png" width="10px" alt="" />{restraunt.rating} </span></div>
+                                              <span>{restraunt.timeToDeliver}Minutes</span>
+                                              <span></span>
+                                          </div>
+                                          </Link>
+                                      </div>
+                                      
+
+                          
+                                  </>
+                              )
+                          })
+                  
+             
+                 
+                  }
               </div>
-              <div className="name">
-                  <h4>Chhole Bhature</h4>
-                  <p>North Indian, Snacks, Indian</p>                  
-              </div>
-              <div className="rating">
-                  <span>Rating</span>
-                  <span>30 MINS</span>
-                  <span>RS 100 FOR TWO</span>
-              </div>
-          </div>
+          
     </>
   )
 }

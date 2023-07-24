@@ -19,25 +19,152 @@
   list-style-type: none;
   
 }
+.body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .navbar ul li{
   padding: 10px;
 }
-.container:hover{
-  border: 1px solid black;
-}
-.container{
-  
-  width: fit-content;
+input{
+  width: 450px;
   padding: 5px;
-  margin:10px;
+  font-size: 20px;
+  display: flex;
+  outline: none;
+  /* border: 1px solid black; */
+  
+}
+
+.btn-search{
+  padding: 5px;
+  width: 100px;
+  font-size: 20px;
+}
+.input{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 5px;
+  /* background-color: red; */
+}
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-left: 70px;
+  justify-content: center;
+}
+.shimmercards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 80px;
+}
+.shimmer{
+  width: 284px;
+  height: 160px;
+  margin: 15px;
+  border-radius: 10px;
+  background-color:lightgray;
+}
+
+.container{
+  /* border: 10px solid black; */
+  border-radius: 15px;
+  width: 280px;
+  padding: 5px;
+  margin:5px;
+  /* justify-content: center; */
   display: flex;
   align-items:flex-start;
   flex-direction: column;
   gap: 10px;
 }
+.cuisines{
+  font-size: 14px;
+  font-weight: 100;
+}
+.img img{
+  width: 254px;
+  border-radius: 10px;
+  height: 160px;
+}
 .rating{
   display: flex;
   gap: 50px;
   font-size: 14px;
-  font-weight: 700;
+  /* font-weight: 700; */
+}
+.rating-1{
+  display: flex;
+  align-items: center;
+  background-color: green;
+  color: white;
+  padding:2px;
+  border-radius: 4px;
+}
+.cover-image{
+  padding-top: 1px;
+  border-radius: 10px;
+  width: 700px;
+  height: 300px;
+  
+}
+.restro-menu{
+  display: flex;
+
+  /* background-color: red; */
+  
+  justify-content: center;
+
+}
+.menu-heading{
+  border-radius: 10px;
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+  /* align-items: center; */
+
+}
+.menu-heading-name{
+  border-bottom: 1px dotted gray;
+  display: flex;
+  /* justify-content: center; */
+  padding: 15px;
+  width: 100%;
+align-items: center;
+justify-content: space-between;
+}
+.rating-star{
+  /* margin-right: 10px; */
+  /* padding: 5px; */
+/* border-radius: 10px; */
+width: fit-content;
+  color: white;
+  color: green;
+  font-size: 20px;
+  font-weight: bolder;
+  /* background-color: green; */
+}
+.menu-heading-name{
+  padding: 4px;
+}
+
+.star-rating{
+  padding: 5px;
+  display: flex;
+margin-right: 40px;
+border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.star-rating :nth-child(2){
+  font-size: 12px;
+  color: grey;
 }
