@@ -13,12 +13,9 @@ const MenuDetails = ({ showImage, setShowImage ,menuImage  }) => {
         <div className="modal" onClick={() => setShowImage(!showImage)}>
           <div className="modal-content">
                     <div className="model-image">
-                        {/* {selectRestraunt.menu.map(item => ( */}
-                            {/* <p>{ item.item_name}</p> */}
-                        {/* ))} */}
+                        
                         <img className="menuimage-large" src={menuImage} alt="" />
-                        {/* {<button className="model-btn" onClick={() => setShowImage(!showImage)} >X</button>}    */}
-                    </div>
+                                            </div>
                     <div>
 
                     </div>
