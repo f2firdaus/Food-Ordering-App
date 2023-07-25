@@ -21,7 +21,7 @@ const Cards = ({ search }) => {
                               return (
                                   <>
                                       <div className="container">
-                                          <Link to={`/menu/${restraunt.id}`}>     <div className="img">
+                                          <Link className='link' to={`/menu/${restraunt.id}`}>     <div className="img">
                                               <img src={restraunt.cloudinaryImageId} alt="" />
                                           </div>
                                           <div className="name">
